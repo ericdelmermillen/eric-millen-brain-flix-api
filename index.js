@@ -3,11 +3,10 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-
+const router = express.Router();
+// const routes = require()
+const routes = require("./routes/videos").router; 
 const { getRandomDuration, getRandomLikesCount, getRandomViewsCount} = require("./utils"); 
-// const {fromRoutes} = require("./routes/videos"); 
-
-// fromRoutes()
 
 const app = express();
  
@@ -23,48 +22,35 @@ require('dotenv').config();
 // Allow access to assets folder
 app.use(express.static('./assets'));
 
+
 // allows access to built in json parsing method
 app.use(express.json());
+
 
 // path to videos.json file
 const videosFilePath = './data/videos.json';
 
 
 
-// response handler for /videos request
-app.get('/videos', (req, res) => {
-  fs.readFile(videosFilePath, (err, data) => {
-    try {
-
-      const videosEssentailData = JSON.parse(data).map(video => {
-        const { comments, description, duration, likes, timestamp, video: videoFile, views, ...essentials } = video;
-        return essentials;
-      });
-      
-      res.json(videosEssentailData);
-      
-    } catch (error) {
-      console.error(error);
-    }
-  });
-});
 
 
-//  response handler for /videos:id request
-app.get('/videos/:id', (req, res) => {
-  
-  const requestedId = req.params.id; 
-  
-  fs.readFile(videosFilePath, (err, data) => {
+// Routes:
 
-      const requestedVideo = JSON.parse(data).find(video => video.id === requestedId);
-      
-    if (!requestedVideo) {
-      return res.status(404).json({ error: 'Video not found' });
-    }
-    res.json(requestedVideo);
-  });
-});
+// // get videos request for /
+// get videos request for /videos
+app.use('/videos', routes);
+
+
+// get video details request for /videos:id
+app.use('/videos/:id', routes);
+
+
+// post videos request for /videos
+app.use('/videos', routes);
+
+
+
+
 
 
 // request handler for post videos; needs:
@@ -79,7 +65,8 @@ app.get('/videos/:id', (req, res) => {
   
 // channel
 // image, 
-// video, 
+// video
+
 app.post('/videos', (req, res) => {
   const newVideo = req.body;
 
@@ -127,7 +114,7 @@ app.post('/videos', (req, res) => {
 // needs validation for comments having length
 app.post('/videos/:id/comments', (req, res) => {
   const requestedId = req.params.id; 
-  // const newComment = req.body;
+  const newComment = req.body;
 
   
   fs.readFile(videosFilePath, (err, data) => {

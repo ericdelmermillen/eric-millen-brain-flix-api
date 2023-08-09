@@ -7,8 +7,8 @@ function getRandomViewsCount() {
 };
 
 function getRandomDuration() {
-  const randomMinutes = Math.floor((Math.random() * 8) + 2); // Random minutes from 0 to 59
-  const randomSeconds = Math.floor(Math.random() * 60); // Random seconds from 0 to 59
+  const randomMinutes = Math.floor((Math.random() * 8) + 2); 
+  const randomSeconds = Math.floor(Math.random() * 60); 
 
   const formattedMinutes = String(randomMinutes).padStart(2, '0');
   const formattedSeconds = String(randomSeconds).padStart(2, '0');
@@ -18,8 +18,8 @@ function getRandomDuration() {
 
 
 
-// module.exports = {
-//   getRandomLikesCount,
-//   getRandomViewsCount,
-//   getRandomDuration
-// }
+module.exports = {
+  getRandomLikesCount,
+  getRandomViewsCount,
+  getRandomDuration
+}
