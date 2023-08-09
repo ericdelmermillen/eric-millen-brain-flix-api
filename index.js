@@ -4,9 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
-// const { getRandomLikesCount, getRandomViewsCount } = require('./utils'); 
-// import { getRandomLikesCount, getRandomViewsCount } from './utils';
-// import { getRandomLikesCount, getRandomViewsCount } from 'utils.js'; 
+
+const { getRandomDuration, getRandomLikesCount, getRandomViewsCount} = require("./utils"); 
+// const {fromRoutes} = require("./routes/videos"); 
+
+// fromRoutes()
 
 const app = express();
 
@@ -66,7 +68,19 @@ app.get('/videos/:id', (req, res) => {
 });
 
 
-// request handler for post videos
+// request handler for post videos; needs:
+  // id
+  // comments
+  // description
+  // duration
+  // likes
+  // timestamp
+  // title
+  // views
+  
+// channel
+// image, 
+// video, 
 app.post('/videos', (req, res) => {
   const newVideo = req.body;
 
@@ -76,9 +90,9 @@ app.post('/videos', (req, res) => {
 
   newVideo.id = uuidv4();
   newVideo.channel = 'some channel';
-  newVideo.duration = '4:00';
-  // newVideo.likes = getRandomLikesCount;
-  // newVideo.views = getRandomViewsCount;
+  newVideo.duration = getRandomDuration();
+  newVideo.likes = getRandomLikesCount();
+  newVideo.views = getRandomViewsCount();
   newVideo.comments = [];
   newVideo.timestamp = new Date().getTime();
 
@@ -110,10 +124,12 @@ app.post('/videos', (req, res) => {
 });
 
 
-// post video comment
+// post video comment; needs: id, comment, likes, name, timestamp 
+// needs validation for comments having length
 app.post('/videos/:id/comments', (req, res) => {
   const requestedId = req.params.id; 
-  const newComment = req.body;
+  // const newComment = req.body;
+
   
   fs.readFile(videosFilePath, (err, data) => {
        

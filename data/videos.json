@@ -1,26 +1,5 @@
 [
   {
-    "title": "test of helper functions",
-    "description": "this is the description",
-    "id": "85ed3659-ea3c-4478-9552-dd0eb97875ac",
-    "channel": "some channel",
-    "duration": "4:00",
-    "comments": [],
-    "timestamp": 1691584186697
-  },
-  {
-    "title": "Sample Video",
-    "image": "https://example.com/sample-image.jpg",
-    "description": "This is a sample video.",
-    "duration": "4:00",
-    "video": "https://example.com/sample-video.mp4",
-    "timestamp": 1691549224371,
-    "comments": [],
-    "id": "cd5c8fbe-2958-49e1-8767-a2098a5dd946",
-    "likes": 9396,
-    "views": 177747
-  },
-  {
     "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
     "title": "BMX Rampage: 2021 Highlights",
     "channel": "Red Cow",
