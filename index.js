@@ -4,9 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const router = express.Router();
-// const routes = require()
 const routes = require("./routes/videos").router; 
-const { getRandomDuration, getRandomLikesCount, getRandomViewsCount} = require("./utils"); 
 
 
 const app = express();

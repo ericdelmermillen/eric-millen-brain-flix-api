@@ -1,36 +1,5 @@
 [
   {
-    "title": "Sample Video for testing with Mat 43",
-    "description": "This is a sample video.",
-    "id": "145e267c-b2df-49d7-a45c-90576a2ceda2",
-    "channel": "some channel",
-    "duration": "06:25",
-    "likes": 19337,
-    "views": 84066,
-    "comments": [],
-    "timestamp": 1691616042239
-  },
-  {
-    "title": "Sample Video for testing with Mat 3",
-    "description": "This is a sample video.",
-    "id": "461676cc-29f0-4a05-a100-2edc8ab78a7b",
-    "channel": "some channel",
-    "duration": "06:07",
-    "likes": 11098,
-    "views": 129198,
-    "comments": [
-      {
-        "title": "Sample Video for testing with Mat 3",
-        "description": "This is a sample video."
-      },
-      {
-        "title": "Sample Video for testing with Mat 43",
-        "description": "This is a sample video."
-      }
-    ],
-    "timestamp": 1691615808941
-  },
-  {
     "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
     "title": "BMX Rampage: 2021 Highlights",
     "channel": "Red Cow",
@@ -42,13 +11,6 @@
     "video": "https://project-2-api.herokuapp.com/stream",
     "timestamp": 1626032763000,
     "comments": [
-      {
-        "id": "35bba08b-1b51-4153-ba7e-6da76b5ec1b9",
-        "name": "Micheal Lyons",
-        "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
-        "likes": 0,
-        "timestamp": 1628522461000
-      },
       {
         "id": "091de676-61af-4ee6-90de-3a7a53af7521",
         "name": "Gary Wong",

@@ -38,6 +38,7 @@ router.route('/')
   newVideo.views = getRandomViewsCount();
   newVideo.comments = [];
   newVideo.timestamp = new Date().getTime();
+  newVideo.image = "https://i.imgur.com/l2Xfgpl.jpg"
 
   // Read existing videos data
   fs.readFile(videosFilePath, (err, data) => {
