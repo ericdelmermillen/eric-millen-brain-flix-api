@@ -21,7 +21,6 @@ router
       const { comments, description, duration, likes, timestamp, video: videoFile, views, ...essentials } = video;
       return essentials;
       })
-      console.log(videosEssentailData)
       res.status(200).json(videosEssentailData);
   })
 .post((req, res) => {
