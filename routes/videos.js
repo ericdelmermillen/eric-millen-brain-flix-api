@@ -5,22 +5,11 @@ const router = express.Router();
 
 const videosFilePath = './data/videos.json';
 
-const { getRandomDuration, getRandomLikesCount, getRandomViewsCount} = require("../utils"); 
-
 // Helper function to get video data
 const getVideos = () => JSON.parse(fs.readFileSync(videosFilePath));
 
-// Helper function to save video data
+const { getRandomDuration, getRandomLikesCount, getRandomViewsCount} = require("../utils"); 
 
-const validateCreateVideo = (req, res, next) => {
-  const newVideo = req.body;
-  if (!newVideo.title || !newVideo.description) {
-    return res.status(400).json({ error: 'All videos require a title and a description' });
-  } else {
-    next();
-  }
-  return newVideo;
-}
 
 // get videos request
 router
@@ -32,6 +21,7 @@ router
       const { comments, description, duration, likes, timestamp, video: videoFile, views, ...essentials } = video;
       return essentials;
       })
+      console.log(videosEssentailData)
       res.status(200).json(videosEssentailData);
   })
 .post((req, res) => {
