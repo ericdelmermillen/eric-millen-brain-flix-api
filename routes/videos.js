@@ -9,7 +9,6 @@ const getVideos = () => JSON.parse(fs.readFileSync(videosFilePath));
 
 const { getRandomDuration, getRandomLikesCount, getRandomViewsCount} = require("../utils"); 
 
-
 router
   .route('/')
   .get((req, res) => {
