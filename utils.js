@@ -16,7 +16,6 @@ function getRandomDuration() {
   return `${formattedMinutes}:${formattedSeconds}`;
 };
 
-
 module.exports = {
   getRandomLikesCount,
   getRandomViewsCount,
