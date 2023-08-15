@@ -1,49 +1,5 @@
 [
   {
-    "title": "1234567890",
-    "description": "1234567890\n",
-    "id": "c1ed7cde-eb2a-4b4d-bf19-61d7fd1ff10c",
-    "channel": "some channel",
-    "duration": "07:54",
-    "likes": 8346,
-    "views": 78078,
-    "comments": [
-      {
-        "comment": "1234567890!",
-        "id": "ebe538f9-4e95-46ca-8a08-7f8302b8736d",
-        "name": "Yo mama...",
-        "likes": 19988,
-        "timestamp": 1692044815007
-      }
-    ],
-    "timestamp": 1692044607123,
-    "image": "images/l2Xfgpl.jpg"
-  },
-  {
-    "title": "1234567890",
-    "description": "1234567890",
-    "id": "54b2145a-dcd5-4ffa-9fde-59c478259594",
-    "channel": "some channel",
-    "duration": "03:32",
-    "likes": 11173,
-    "views": 63691,
-    "comments": [],
-    "timestamp": 1692044587421,
-    "image": "images/l2Xfgpl.jpg"
-  },
-  {
-    "title": "1234567890",
-    "description": "1234567890",
-    "id": "3b82144f-48d2-460f-b595-15082fce095b",
-    "channel": "some channel",
-    "duration": "07:11",
-    "likes": 17207,
-    "views": 129411,
-    "comments": [],
-    "timestamp": 1692044541581,
-    "image": "images/l2Xfgpl.jpg"
-  },
-  {
     "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
     "title": "BMX Rampage: 2021 Highlights",
     "channel": "Red Cow",
@@ -294,20 +250,6 @@
     "timestamp": 1631892222000,
     "comments": [
       {
-        "comment": "1234567890!!",
-        "id": "1bef3d21-3091-4b8f-8df7-576dfe0b8c2b",
-        "name": "Yo mama...",
-        "likes": 19710,
-        "timestamp": 1692044930722
-      },
-      {
-        "comment": "1234567890",
-        "id": "e910aad3-659e-4af6-9190-cc3d4fd9f7fd",
-        "name": "Yo mama...",
-        "likes": 13015,
-        "timestamp": 1692044414104
-      },
-      {
         "id": "6ff4314c-acde-4c91-a753-95cb7a366ee9",
         "name": "Jesse Cruz",
         "comment": "There’s no place quite like the open ocean. Wind in your sails. The cool mist is perfect to wake you up in the morning and lull you to sleep in the evening. What an experience.",
@@ -335,13 +277,6 @@
     "video": "https://project-2-api.herokuapp.com/stream",
     "timestamp": 1632344461000,
     "comments": [
-      {
-        "comment": "dgjnaerjkgjkrstrtsnjkjkntr",
-        "id": "afd4443e-fb03-4f86-87a6-75e23efa2073",
-        "name": "Yo mama...",
-        "likes": 10725,
-        "timestamp": 1692025141038
-      },
       {
         "id": "2d818087-c1f4-4ec2-bcdc-b545fd6ec258",
         "name": "Martin Evergreen",

@@ -5,13 +5,11 @@ const router = express.Router();
 
 const videosFilePath = './data/videos.json';
 
-// Helper function to get video data
 const getVideos = () => JSON.parse(fs.readFileSync(videosFilePath));
 
 const { getRandomDuration, getRandomLikesCount, getRandomViewsCount} = require("../utils"); 
 
 
-// get videos request
 router
   .route('/')
   .get((req, res) => {
@@ -35,13 +33,11 @@ router
   newVideo.timestamp = new Date().getTime();
   newVideo.image = "images/l2Xfgpl.jpg"
 
-  // Read existing videos data
   fs.readFile(videosFilePath, (err, data) => {
 
   const videos = JSON.parse(data);
   videos.unshift(newVideo);
 
-  // Write updated videos data back to the file
   fs.writeFile(videosFilePath, JSON.stringify(videos, null, 2), err => {
     if (err) {
       console.error('Error writing videos.json:', err);
@@ -53,7 +49,6 @@ router
 
 
 router.route('/:id')
-// get video details
   .get((req, res) => {
     
   const id = req.params.id; 
@@ -69,7 +64,6 @@ router.route('/:id')
 })
 
 router.post('/:id/comments', (req, res) => {
-  // post comments on a video
   fs.readFile(videosFilePath, (err, data) => {
     
     const videos = JSON.parse(data);
@@ -89,7 +83,6 @@ router.post('/:id/comments', (req, res) => {
     newComment.timestamp = new Date().getTime();
     requestedVideo.comments.unshift(newComment);
 
-    // Write the updated data back to the JSON file
     fs.writeFile(videosFilePath, JSON.stringify(videos, null, 2), err => {
       if (err) {
         console.error('Error writing videos.json:', err);

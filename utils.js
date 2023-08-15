@@ -14,12 +14,11 @@ function getRandomDuration() {
   const formattedSeconds = String(randomSeconds).padStart(2, '0');
 
   return `${formattedMinutes}:${formattedSeconds}`;
-}
-
+};
 
 
 module.exports = {
   getRandomLikesCount,
   getRandomViewsCount,
   getRandomDuration
-}
+};

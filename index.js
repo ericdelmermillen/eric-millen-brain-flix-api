@@ -9,7 +9,6 @@ app.use(express.static('./public'));
 
 app.use(cors({origin: 'http://localhost:3000'}));
 
-
 app.use('/videos', videosRouter);
 
 app.listen(8080, () => console.log(`🚀 Listening on 8080`));
